@@ -1,0 +1,1079 @@
+ *{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.loading-screen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fa363698;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-screen-text {
+    font-family: 'Alfa Slab One', cursive;
+    color: white;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 600px){
+
+    .main_part {
+        grid-area: main-part;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "first-card"
+                            "second-card"
+                            "third-card";
+    }
+
+    body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "intro"
+                         "main-part"
+                         "added-cards"
+                         "button";
+    }
+
+    .intro {
+        grid-area: intro;
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        text-align: center;
+        height: max-content;
+        margin-top: 5%;
+        font-size: 1rem;
+    }
+
+    .first-card {
+        background-color: white;
+        grid-area: first-card;
+        margin: 10% auto;
+        width: 70vw;
+        height: 80vh;
+        border-radius: 35px;
+        display: grid;
+        grid-template-rows: 40% 60%;
+        grid-template-areas: "image"
+                            "product-info";
+        gap: 15% 0% 0% 0%;
+        -webkit-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        -moz-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+    }
+
+    .first-card img {
+        grid-area: image;
+        width: inherit;
+        height: auto;
+        max-height: 100%;
+        border-radius: 35px 35px 0px 0px;
+    }
+
+    .first-card h2 {
+        grid-area: product-info;
+        color: #fa3636;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        margin-left: 10%;
+    }
+
+    .first-card p {
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        font-weight: bolder;
+        margin: 5% 10%;
+        font-size: 1.2rem;
+    }
+
+    .product-price {
+        display: flex;
+    }
+
+    .price {
+        color: #fa3636;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        margin-left: 10%;
+        text-decoration: line-through;
+    }
+
+    .discount-price {
+        color: #fa3636;
+        font-family: 'Roboto', sans-serif;
+        margin-left: 5%;
+    }
+
+    #discount {
+        color: #fa3636;
+        font-weight: lighter;
+        font-size: 1.2rem;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        margin: 0% 5%;
+    }
+
+    .shop-now {
+        background-color: #fa3636;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 1rem;
+        padding: 3% 5%;
+    }
+
+    .ages {
+        background-color: #fa3636;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        padding: 3%;
+    }
+
+    .second-card {
+        background-color: white;
+        grid-area: second-card;
+        margin: 10% auto;
+        width: 70vw;
+        height: 80vh;
+        border-radius: 35px;
+        display: grid;
+        grid-template-rows: 40% 60%;
+        grid-template-areas: "image-2"
+            "product-info-2";
+        gap: 15% 0% 0% 0%;
+        -webkit-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        -moz-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+    }
+
+    .second-card img {
+        grid-area: image-2;
+        width: inherit;
+        height: auto;
+        max-height: 100%;
+        border-radius: 35px 35px 0px 0px;
+    }
+
+    .second-card h2 {
+        grid-area: product-info-2;
+        color: #ffdd00;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        margin-left: 10%;
+    }
+
+    .second-card p {
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        font-weight: bolder;
+        margin: 5% 10%;
+        font-size: 1.2rem;
+    }
+
+    .second-card .price {
+        color: #ffdd00;
+    }
+
+    .second-card .discount-price {
+        color: #ffdd00;
+    }
+
+    .second-card #discount {
+        color: #ffdd00;
+    }
+
+    .second-card .shop-now {
+        background-color: #ffdd00;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 1rem;
+        padding: 3% 5%;
+    }
+
+    .second-card .ages {
+        background-color: #ffdd00;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        padding: 3%;
+    }
+
+    .third-card {
+        background-color: white;
+        grid-area: third-card;
+        margin: 10% auto;
+        width: 70vw;
+        height: 80vh;
+        border-radius: 35px;
+        display: grid;
+        grid-template-rows: 40% 60%;
+        grid-template-areas: "image-3"
+            "product-info-3";
+        gap: 15% 0% 0% 0%;
+        -webkit-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        -moz-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+    }
+
+    .third-card img {
+        grid-area: image-3;
+        width: inherit;
+        height: auto;
+        max-height: 100%;
+        border-radius: 35px 35px 0px 0px;
+    }
+
+    .third-card h2 {
+        grid-area: product-info-3;
+        color: #89d9fb;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        margin-left: 10%;
+    }
+
+    .third-card p {
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        font-weight: bolder;
+        margin: 5% 10%;
+        font-size: 1.2rem;
+    }
+
+    .third-card .price {
+        color: #89d9fb;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        margin-left: 10%;
+        text-decoration: line-through;
+    }
+
+    .third-card .discount-price {
+        color: #89d9fb;
+        font-family: 'Roboto', sans-serif;
+        margin-left: 5%;
+    }
+
+    .third-card #discount {
+        color: #89d9fb;
+        font-weight: lighter;
+        font-size: 1.2rem;
+    }
+
+    .third-card .shop-now {
+        background-color: #89d9fb;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 1rem;
+        padding: 3% 5%;
+    }
+
+    .third-card .ages {
+        background-color: #89d9fb;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        padding: 3%;
+    }
+
+    .show-more {
+        grid-area: button;
+        background-color: #fa3636;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 1rem;
+        padding: 3% 5%;
+        margin: 5% 35%; 
+    }
+
+    
+    .added_card {
+        background-color: white;
+        margin: 10% auto;
+        width: 70vw;
+        height: 80vh;
+        border-radius: 35px;
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        -webkit-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        -moz-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+    }
+
+    .added_card img {
+        width: inherit;
+        height: auto;
+        max-height: 80%;
+        object-fit: cover;
+        border-radius: 35px 35px 0px 0px;
+    }
+
+    .added_card .product-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5%;
+    }
+
+    .added_card-title {
+        color: rgb(19, 139, 19);
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        margin: 0% 10%;
+        height: fit-content;
+    }
+
+    .added_card-desc {
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        margin: 0% 10%;
+        font-size: 1.2rem;
+    }
+
+    .added_card-price {
+        font-weight: bolder;
+        color: rgb(19, 139, 19);
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        margin: 0% 10%;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+    
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "intro" 
+                             "default-cards"
+                             "added-cards"
+                             "button";
+    }
+
+    .main_part { 
+        grid-area: default-cards;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .intro {
+        grid-area: intro;
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        text-align: center;
+        margin-top: 5%;
+        font-size: 1.5rem;
+    }
+
+    .first-card {
+        background-color: white;
+        grid-area: first-card;
+        margin: 10% auto;
+        width: 45vw;
+        height: 85vh;
+        border-radius: 35px;
+        display: grid;
+        grid-template-rows: 40% 60%;
+        grid-template-areas: "image"
+                            "product-info";
+        gap: 15% 0% 0% 0%;
+        -webkit-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        -moz-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+    }
+
+    .first-card img {
+        grid-area: image;
+        width: inherit;
+        height: auto;
+        max-height: 100%;
+        border-radius: 35px 35px 0px 0px;
+    }
+
+    .first-card h2 {
+        grid-area: product-info;
+        color: #fa3636;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        margin: 5% 10%;
+    }
+
+    .first-card p {
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        font-weight: bolder;
+        margin: 5% 10%;
+        font-size: 1rem;
+    }
+
+    .product-price {
+        display: flex;
+    }   
+
+    .price {
+        color: #fa3636;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        margin-left: 10%;
+        text-decoration: line-through;
+    }
+
+    .discount-price {
+        color: #fa3636;
+        font-family: 'Roboto', sans-serif;
+        margin-left: 5%;
+    }
+
+    #discount {
+        color: #fa3636;
+        font-weight: lighter;
+        font-size: 1rem;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        margin: 0% 5%;
+    }
+
+    .shop-now {
+        background-color: #fa3636;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 1rem;
+        padding: 3% 5%;
+    }
+
+    .ages {
+        background-color: #fa3636;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        padding: 3%;
+    }
+
+    .second-card {
+        background-color: white;
+        grid-area: second-card;
+        margin: 10% auto;
+         width: 45vw;
+        height: 85vh;
+        border-radius: 35px;
+        display: grid;
+        grid-template-rows: 40% 60%;
+        grid-template-areas: "image-2"
+            "product-info-2";
+        gap: 15% 0% 0% 0%;
+        -webkit-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        -moz-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+    }
+
+    .second-card img {
+        grid-area: image-2;
+        width: inherit;
+        height: auto;
+        max-height: 100%;
+        border-radius: 35px 35px 0px 0px;
+    }
+
+    .second-card h2 {
+        grid-area: product-info-2;
+        color: #ffdd00;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        margin: 5% 10%;
+    }
+
+    .second-card p {
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        font-weight: bolder;
+        margin: 5% 10%;
+        font-size: 1rem;
+    }
+
+    .second-card .price {
+        margin-top: 10%;
+        color: #ffdd00;
+    }
+
+    .second-card .discount-price {
+        margin-top: 10%;
+        color: #ffdd00;
+    }
+
+    .second-card #discount {
+        color: #ffdd00;
+    }
+
+    .second-card .shop-now {
+        background-color: #ffdd00;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 1rem;
+        padding: 3% 5%;
+    }
+
+    .second-card .ages {
+        background-color: #ffdd00;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        padding: 3%;
+    }
+
+    .third-card {
+        background-color: white;
+        grid-area: third-card;
+        margin: 10% auto;
+         width: 45vw;
+        height: 85vh;
+        border-radius: 35px;
+        display: grid;
+        grid-template-rows: 40% 60%;
+        grid-template-areas: "image-3"
+            "product-info-3";
+        gap: 15% 0% 0% 0%;
+        -webkit-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        -moz-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+    }
+
+    .third-card img {
+        grid-area: image-3;
+        width: inherit;
+        height: auto;
+        max-height: 100%;
+        border-radius: 35px 35px 0px 0px;
+    }
+
+    .third-card h2 {
+        grid-area: product-info-3;
+        color: #89d9fb;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        margin-left: 10%;
+    }
+
+    .third-card p {
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        font-weight: bolder;
+        margin: 5% 10%;
+        font-size: 1rem;
+    }
+
+    .third-card .price {
+        color: #89d9fb;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        margin: 10% 10%;
+        text-decoration: line-through;
+    }
+
+    .third-card .discount-price {
+        color: #89d9fb;
+        font-family: 'Roboto', sans-serif;
+        margin: 10% 5%;
+    }
+
+    .third-card #discount {
+        color: #89d9fb;
+        font-weight: lighter;
+        font-size: 1.2rem;
+    }
+
+    .third-card .shop-now {
+        background-color: #89d9fb;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 1rem;
+        padding: 3% 5%;
+    }
+
+    .third-card .ages {
+        background-color: #89d9fb;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        padding: 3%;
+    }
+
+    .show-more {
+        grid-area: button;
+        background-color: #fa3636;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 1rem;
+        padding: 3% 5%;
+        margin: 5% 35%; 
+    }
+
+    .card-container {
+        grid-area: added-cards;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100vw;
+    }
+
+    .added_card {
+        background-color: white;
+        margin: 10% auto;
+        width: 45vw;
+        height: 85vh;
+        max-height: max-content;
+        border-radius: 35px;
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        -webkit-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        -moz-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+    }
+
+    .added_card img {
+        width: inherit;
+        height: auto;
+        max-height: 80%;
+        object-fit: cover;
+        border-radius: 35px 35px 0px 0px;
+    }
+
+    .added_card .product-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5%;
+    }
+
+    .added_card-title {
+        color: rgb(19, 139, 19);
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        margin: 0% 10%;
+        height: fit-content;
+    }
+
+    .added_card-desc {
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        margin: 0% 10%;
+        font-size: 1.2rem;
+    }
+
+    .added_card-price {
+        font-weight: bolder;
+        color: rgb(19, 139, 19);
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+    margin: 0% 10%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    body {
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "intro"
+                             "main-part"
+                             "added-card"
+                             "button";
+    }  
+
+    .main_part {
+        grid-area: main-part;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "first-card second-card third-card";
+        column-gap: 5%;
+        row-gap: 15%;
+    }
+    
+    .intro {
+        grid-area: intro;
+        text-align: center;
+        margin-top: 5%;
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        font-size: 1.2rem;
+    }
+
+    .first-card {
+        background-color: white;
+        grid-area: first-card;
+        margin: 10% auto;
+        width: 1fr;
+        max-width:min-content;
+        height: 80vh;
+        border-radius: 35px;
+        display: grid;
+        grid-template-rows: 40% 60%;
+        grid-template-areas: "image"
+                       	     "product-info";
+        gap: 15% 0% 0% 0%;
+        -webkit-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        -moz-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+    }
+    
+    .first-card img {
+        grid-area: image;
+        width: inherit;
+        height: auto;
+        max-height: 100%;
+        border-radius: 35px 35px 0px 0px;
+    }
+    
+    .first-card h2 {
+        grid-area: product-info;
+        color: #fa3636;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        margin: 5% 10%;
+    }
+    
+    .first-card p {
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        font-weight: bolder;
+        margin: 5% 10%;
+        font-size: 1rem;
+    }
+    
+    .product-price {
+         display: flex;
+    }
+    
+    .price {
+        color: #fa3636;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        margin-left: 10%;
+        text-decoration: line-through;
+    }
+    
+    .discount-price {
+        color: #fa3636;
+        font-family: 'Roboto', sans-serif;
+        margin-left: 5%;
+    }
+    
+    #discount {
+        color: #fa3636;
+        font-weight: lighter;
+        font-size: 1rem;
+    }
+    
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        margin: 0% 5%;
+    }
+    
+    .shop-now {
+        background-color: #fa3636;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 1rem;
+        padding: 3% 5%;
+        margin-top: 5%;
+    }
+    
+    .ages {
+        background-color: #fa3636;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        padding: 3%;
+        margin-top: 5%;
+    }
+    
+    .second-card {
+        background-color: white;
+         grid-area: second-card;
+        margin: 10% auto;
+        width: 1fr;
+        height: 80vh;
+        max-width: min-content;
+        border-radius: 35px;
+        display: grid;
+        grid-template-rows: 40% 60%;
+        grid-template-areas: "image-2"
+                "product-info-2";
+        gap: 15% 0% 0% 0%;
+        -webkit-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+         -moz-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+         box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+    }
+    
+    .second-card img {
+        grid-area: image-2;
+        width: inherit;
+        height: auto;
+        max-height: 100%;
+        border-radius: 35px 35px 0px 0px;
+    }
+    
+    .second-card h2 {
+        grid-area: product-info-2;
+        color: #ffdd00;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        margin: 5% 10%;
+    }
+    
+    .second-card p {
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        font-weight: bolder;
+        margin: 5% 10%;
+        font-size: 1rem;
+    }
+    
+    .second-card .price {
+         color: #ffdd00;
+    }
+    
+    .second-card .discount-price {
+        color: #ffdd00;
+    }
+    
+    .second-card #discount {
+        color: #ffdd00;
+    }
+    
+    .second-card .shop-now {
+        background-color: #ffdd00;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 1rem;
+        padding: 3% 5%;
+    }
+    
+    .second-card .ages {
+        background-color: #ffdd00;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        padding: 3%;
+    }
+    
+    .third-card {
+        background-color: white;
+        grid-area: third-card;
+        margin: 10% auto;
+        width: 1fr;
+        max-width: min-content;
+        height: 80vh;
+        border-radius: 35px;
+        display: grid;
+        grid-template-rows: 40% 60%;
+        grid-template-areas: "image-3"
+                             "product-info-3";
+        gap: 15% 0% 0% 0%;
+        -webkit-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        -moz-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+    }
+    
+    .third-card img {
+        grid-area: image-3;
+        width: inherit;
+        height: auto;
+        max-height: 100%;
+        border-radius: 35px 35px 0px 0px;
+    }
+    
+    .third-card h2 {
+        grid-area: product-info-3;
+        color: #89d9fb;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        margin: 5% 10%;
+    }
+    
+    .third-card p {
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        font-weight: bolder;
+        margin: 5% 10%;
+        font-size: 1rem;
+    }
+    
+    .third-card .price {
+        color: #89d9fb;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        margin-left: 10%;
+        text-decoration: line-through;
+    }
+    
+    .third-card .discount-price {
+        color: #89d9fb;
+        font-family: 'Roboto', sans-serif;
+        margin-left: 5%;
+    }
+    
+    .third-card #discount {
+        color: #89d9fb;
+        font-weight: lighter;
+        font-size: 1.2rem;
+    }
+    
+    .third-card .shop-now {
+        background-color: #89d9fb;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 1rem;
+        padding: 3% 5%;
+    }
+    
+    .third-card .ages {
+        background-color: #89d9fb;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        padding: 3%;
+    }
+    
+    .show-more {
+        grid-area: button;
+        background-color: #fa3636;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        border: none;
+        border-radius: 10px;
+        font-size: 1rem;
+        padding: 1.5% 3%;
+        justify-self: center; 
+        cursor: pointer;
+    }
+
+    .card-container {
+        grid-area: added-card;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100vw;
+        justify-self: center;
+    }
+
+    .added_card {
+        margin: 10% auto;
+        width: 30vw;
+        height: 85vh;
+        max-width: min-content;
+        border-radius: 35px;
+        background-color: white;
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        -webkit-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        -moz-box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+        box-shadow: 7px -1px 80px -22px rgba(0, 0, 0, 0.81);
+    }
+
+    .added_card img {
+        width: inherit;
+        height: auto;
+        max-height: 80%;
+        object-fit: cover;
+        border-radius: 35px 35px 0px 0px;
+    }
+
+    .added_card .product-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5%;
+    }
+
+    .added_card-title {
+        color: rgb(19, 139, 19);
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        margin: 0% 10%;
+        height: fit-content;
+    }
+
+    .added_card-desc {
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        margin: 0% 10%;
+        font-size: 1.2rem;
+    }
+
+    .added_card-price {
+        font-weight: bolder;
+        color: rgb(19, 139, 19);
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        margin: 0% 10%;
+    }
+}
